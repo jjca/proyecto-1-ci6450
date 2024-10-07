@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://srawxeklparu"]
+
+[ext_resource type="Script" path="res://scripts/kinematic_seek.gd" id="1_yt34t"]
+
+[node name="KinematicSeek" type="Node2D"]
+script = ExtResource("1_yt34t")
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -10.0
+offset_right = 11.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0.0980392, 1, 1, 1)
+metadata/_edit_group_ = true

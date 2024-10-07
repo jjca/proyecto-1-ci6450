@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://bybxekcimbds4"]
+
+[ext_resource type="PackedScene" uid="uid://be0m5ubqry3c" path="res://scenes/node_2d.tscn" id="1_20leh"]
+[ext_resource type="PackedScene" uid="uid://srawxeklparu" path="res://scenes/kinematic_seek.tscn" id="2_0c8co"]
+[ext_resource type="PackedScene" uid="uid://bwjyhhqsony1" path="res://scenes/kinematic_arrive.tscn" id="3_1rqku"]
+[ext_resource type="PackedScene" uid="uid://2pbqb70bgpmg" path="res://scenes/kinematic_flee.tscn" id="4_6l5x0"]
+
+[node name="Main" type="Node"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_20leh")]
+
+[node name="KinematicSeek" parent="." instance=ExtResource("2_0c8co")]
+
+[node name="KinematicArrive" parent="." instance=ExtResource("3_1rqku")]
+
+[node name="KinematicFlee" parent="." instance=ExtResource("4_6l5x0")]
