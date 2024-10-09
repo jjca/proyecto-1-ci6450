@@ -1,26 +1,28 @@
 extends Node2D
 
-var maxSpeed : float = 50
+var maxSpeed : float = 100
 var velocity : Vector2 = Vector2.ZERO
-var maxRotation : float = 0.001
+var maxRotation : float = 0.03
+var orientation : float
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Sets initial orientation applies the rotation
+	orientation = randf_range(0.0,2.0*PI) 
+	set_rotation(orientation)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta: float) -> void:
-	var character = get_node(".")
-	rotation = randf_range(-1.0,1.0) * maxRotation * PI
-	velocity = getSteering(character,rotation)
+func _process(delta: float) -> void:
+	update(delta)
 	
-	character.velocity += velocity * rotation
-	character.position += character.velocity * delta
-	
+func update(delta) -> void:
+	velocity = getSteering()
+	position += velocity * delta
 
-func getSteering(character,rotation):
-	var rotationVector : Vector2 = Vector2.from_angle(rotation)
-	print(rotationVector)
-	var velocity = maxSpeed * rotationVector
-	
+func getSteering():
+	orientation += randf_range(-1,1) * maxRotation
+	var rotationVector = Vector2.from_angle(orientation) 
+	velocity = maxSpeed * rotationVector.normalized()
+	set_rotation(orientation)
 	return velocity
-	

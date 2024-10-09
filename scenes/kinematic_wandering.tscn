@@ -1,22 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw6mjwo6nxhmn"]
+[gd_scene load_steps=3 format=3 uid="uid://bw6mjwo6nxhmn"]
 
 [ext_resource type="Script" path="res://scripts/kinematic_wandering.gd" id="1_pv6fd"]
+[ext_resource type="Texture2D" uid="uid://b8p1dacjf0g0x" path="res://assets/triangle-svgrepo-com.svg" id="2_kx72b"]
 
 [node name="KinematicWandering" type="Node2D"]
 position = Vector2(512, 310)
 script = ExtResource("1_pv6fd")
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_kx72b")
 metadata/_edit_group_ = true
