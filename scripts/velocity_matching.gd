@@ -28,5 +28,5 @@ func getSteering(target,character):
 		char_velocity = char_velocity.normalized()
 		char_velocity *= maxAcceleration
 		
-	print(char_velocity.length())
+	#print(char_velocity.length())
 	return char_velocity

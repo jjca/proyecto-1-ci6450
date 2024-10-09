@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmhsd7c5gk73l"]
+[gd_scene load_steps=3 format=3 uid="uid://orfuemkkf6qo"]
 
 [ext_resource type="Texture2D" uid="uid://dqkmlw12mf6oe" path="res://assets/triangle-svgrepo-com_rotated.png" id="1_4ms1r"]
-[ext_resource type="Script" path="res://scripts/face.gd" id="1_b8xd8"]
+[ext_resource type="Script" path="res://scripts/face.gd" id="1_43pnp"]
 
 [node name="Face" type="Node2D"]
-script = ExtResource("1_b8xd8")
+script = ExtResource("1_43pnp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_4ms1r")
