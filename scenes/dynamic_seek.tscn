@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqh1aai30nbu0"]
+
+[ext_resource type="Script" path="res://scripts/dynamic_seek.gd" id="1_mqrds"]
+[ext_resource type="Texture2D" uid="uid://b8p1dacjf0g0x" path="res://assets/triangle-svgrepo-com.svg" id="2_v71nt"]
+
+[node name="DynamicSeek" type="Node2D"]
+script = ExtResource("1_mqrds")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_v71nt")
+metadata/_edit_group_ = true

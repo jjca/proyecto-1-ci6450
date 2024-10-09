@@ -1,16 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://bybxekcimbds4"]
+[gd_scene load_steps=8 format=3 uid="uid://bybxekcimbds4"]
 
 [ext_resource type="PackedScene" uid="uid://be0m5ubqry3c" path="res://scenes/node_2d.tscn" id="1_20leh"]
 [ext_resource type="PackedScene" uid="uid://srawxeklparu" path="res://scenes/kinematic_seek.tscn" id="2_0c8co"]
 [ext_resource type="PackedScene" uid="uid://bwjyhhqsony1" path="res://scenes/kinematic_arrive.tscn" id="3_1rqku"]
 [ext_resource type="PackedScene" uid="uid://2pbqb70bgpmg" path="res://scenes/kinematic_flee.tscn" id="4_6l5x0"]
+[ext_resource type="PackedScene" uid="uid://bw6mjwo6nxhmn" path="res://scenes/kinematic_wandering.tscn" id="5_l0mgh"]
+[ext_resource type="PackedScene" uid="uid://bqh1aai30nbu0" path="res://scenes/dynamic_seek.tscn" id="6_3b0ps"]
+[ext_resource type="PackedScene" uid="uid://b28174igw5lqv" path="res://scenes/dynamic_flee.tscn" id="7_xgqkc"]
 
 [node name="Main" type="Node"]
 
 [node name="Node2D" parent="." instance=ExtResource("1_20leh")]
+position = Vector2(709, 75)
 
 [node name="KinematicSeek" parent="." instance=ExtResource("2_0c8co")]
+visible = false
 
 [node name="KinematicArrive" parent="." instance=ExtResource("3_1rqku")]
+visible = false
 
 [node name="KinematicFlee" parent="." instance=ExtResource("4_6l5x0")]
+visible = false
+
+[node name="KinematicWandering" parent="." instance=ExtResource("5_l0mgh")]
+visible = false
+
+[node name="DynamicSeek" parent="." instance=ExtResource("6_3b0ps")]
+
+[node name="DynamicFlee" parent="." instance=ExtResource("7_xgqkc")]
+visible = false
