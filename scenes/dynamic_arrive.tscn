@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://pyl503btqw6j"]
+
+[ext_resource type="Script" path="res://scripts/dynamic_arrive.gd" id="1_4tkh6"]
+[ext_resource type="Texture2D" uid="uid://b8p1dacjf0g0x" path="res://assets/triangle-svgrepo-com.svg" id="1_dttk3"]
+
+[node name="DynamicArrive" type="Node2D"]
+script = ExtResource("1_4tkh6")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_dttk3")
+metadata/_edit_group_ = true
