@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://be0m5ubqry3c"]
 
 [ext_resource type="Script" path="res://scripts/node_2d.gd" id="1_k6ta8"]
-[ext_resource type="Texture2D" uid="uid://bgvaaxbiqu751" path="res://assets/icon.svg" id="2_5u8yd"]
+[ext_resource type="Texture2D" uid="uid://b8p1dacjf0g0x" path="res://assets/triangle-svgrepo-com.svg" id="2_5ghg0"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(231, 113)
@@ -9,6 +9,6 @@ script = ExtResource("1_k6ta8")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.46875, 0.46875)
-texture = ExtResource("2_5u8yd")
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_5ghg0")
 metadata/_edit_group_ = true
