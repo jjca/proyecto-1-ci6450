@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0dh1bgtnkiye"]
+
+[ext_resource type="Script" path="res://scripts/align.gd" id="1_e5shd"]
+[ext_resource type="Texture2D" uid="uid://dqkmlw12mf6oe" path="res://assets/triangle-svgrepo-com_rotated.png" id="2_3t211"]
+
+[node name="Align" type="Node2D"]
+position = Vector2(967, 118)
+script = ExtResource("1_e5shd")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_3t211")
+metadata/_edit_group_ = true
+
+[node name="Objetivo" type="Sprite2D" parent="."]
+position = Vector2(-298, 8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_3t211")
+metadata/_edit_group_ = true

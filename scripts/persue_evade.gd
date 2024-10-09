@@ -1,8 +1,9 @@
-class_name Seek extends Node2D
+extends Node2D
 
 var maxSpeed : float = 100
 var velocity : Vector2 = Vector2.ZERO
 var maxAcceleration : float = 10
+var maxPrediction: float = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,11 +16,22 @@ func _process(delta: float) -> void:
 	update(delta,character,target)
 
 func update(delta,character,target) -> void:
-	character.velocity = getSteering(target,character)
-	character.position += character.velocity * delta
+	character.velocity = getSteering(target,character) * delta
+	#character.position += character.velocity * delta
 
 func getSteering(target,character):
-	var char_velocity : Vector2 = target.position - character.position
-	char_velocity = char_velocity.normalized() * maxAcceleration * maxSpeed
-	character.rotation = 0
-	return char_velocity
+	var char_direction : Vector2 = target.position - character.position
+	var distance = char_direction.length()
+	
+	var speed = character.velocity.length()
+	var prediction
+	if speed <= distance / maxPrediction:
+		prediction = maxPrediction
+	else:
+		prediction = distance / speed
+	
+	character.position += target.velocity * prediction
+	
+	return char_direction
+
+	

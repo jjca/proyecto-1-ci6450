@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://7woqug585n18"]
+
+[ext_resource type="Script" path="res://scripts/velocity_matching.gd" id="1_ok12q"]
+[ext_resource type="Texture2D" uid="uid://dqkmlw12mf6oe" path="res://assets/triangle-svgrepo-com_rotated.png" id="2_lbfcs"]
+
+[node name="VelocityMatching" type="Node2D"]
+scale = Vector2(0.07, 0.07)
+script = ExtResource("1_ok12q")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lbfcs")
+metadata/_edit_group_ = true
