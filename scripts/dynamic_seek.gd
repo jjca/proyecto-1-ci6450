@@ -20,5 +20,6 @@ func update(delta,character,target) -> void:
 
 func getSteering(target,character):
 	var char_velocity : Vector2 = target.position - character.position
-	char_velocity += char_velocity.normalized() * maxAcceleration
+	char_velocity = char_velocity.normalized() * maxAcceleration * maxSpeed
+	character.rotation = 0
 	return char_velocity
