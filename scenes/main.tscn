@@ -1,17 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://bybxekcimbds4"]
+[gd_scene load_steps=14 format=3 uid="uid://bybxekcimbds4"]
 
 [ext_resource type="PackedScene" uid="uid://be0m5ubqry3c" path="res://scenes/node_2d.tscn" id="1_20leh"]
 [ext_resource type="PackedScene" uid="uid://srawxeklparu" path="res://scenes/kinematic_seek.tscn" id="2_0c8co"]
 [ext_resource type="PackedScene" uid="uid://bwjyhhqsony1" path="res://scenes/kinematic_arrive.tscn" id="3_1rqku"]
 [ext_resource type="PackedScene" uid="uid://2pbqb70bgpmg" path="res://scenes/kinematic_flee.tscn" id="4_6l5x0"]
 [ext_resource type="PackedScene" uid="uid://bw6mjwo6nxhmn" path="res://scenes/kinematic_wandering.tscn" id="5_l0mgh"]
-[ext_resource type="PackedScene" path="res://scenes/dynamic_seek.tscn" id="6_3b0ps"]
-[ext_resource type="PackedScene" path="res://scenes/dynamic_flee.tscn" id="7_xgqkc"]
-[ext_resource type="PackedScene" path="res://scenes/dynamic_arrive.tscn" id="8_sidia"]
+[ext_resource type="PackedScene" uid="uid://bqh1aai30nbu0" path="res://scenes/dynamic_seek.tscn" id="6_3b0ps"]
+[ext_resource type="PackedScene" uid="uid://b28174igw5lqv" path="res://scenes/dynamic_flee.tscn" id="7_xgqkc"]
+[ext_resource type="PackedScene" uid="uid://pyl503btqw6j" path="res://scenes/dynamic_arrive.tscn" id="8_sidia"]
 [ext_resource type="PackedScene" uid="uid://xhx3rnbob0qn" path="res://scenes/align.tscn" id="9_hpiaj"]
-[ext_resource type="PackedScene" path="res://scenes/velocity_matching.tscn" id="10_qvd21"]
-[ext_resource type="PackedScene" path="res://scenes/persue_evade.tscn" id="11_xhe5g"]
+[ext_resource type="PackedScene" uid="uid://7woqug585n18" path="res://scenes/velocity_matching.tscn" id="10_qvd21"]
+[ext_resource type="PackedScene" uid="uid://bext01h3xcr4w" path="res://scenes/persue_evade.tscn" id="11_xhe5g"]
 [ext_resource type="PackedScene" uid="uid://orfuemkkf6qo" path="res://scenes/face.tscn" id="12_fv61c"]
+[ext_resource type="PackedScene" uid="uid://che7upbl3ib6b" path="res://scenes/velocity_matching_align.tscn" id="13_27xgv"]
 
 [node name="Main" type="Node"]
 
@@ -20,7 +21,7 @@ visible = false
 position = Vector2(357, 156)
 
 [node name="Node2D" parent="." instance=ExtResource("1_20leh")]
-position = Vector2(503, 310)
+position = Vector2(616, 440)
 
 [node name="KinematicSeek" parent="." instance=ExtResource("2_0c8co")]
 visible = false
@@ -29,9 +30,6 @@ visible = false
 visible = false
 
 [node name="KinematicFlee" parent="." instance=ExtResource("4_6l5x0")]
-visible = false
-
-[node name="KinematicWandering" parent="." instance=ExtResource("5_l0mgh")]
 visible = false
 
 [node name="DynamicSeek" parent="." instance=ExtResource("6_3b0ps")]
@@ -43,11 +41,57 @@ visible = false
 [node name="DynamicArrive" parent="." instance=ExtResource("8_sidia")]
 visible = false
 
-[node name="VelocityMatching" parent="." instance=ExtResource("10_qvd21")]
-visible = false
-position = Vector2(144, 266)
-
 [node name="Persue_Evade" parent="." instance=ExtResource("11_xhe5g")]
 visible = false
 
-[node name="Face" parent="." instance=ExtResource("12_fv61c")]
+[node name="KinematicWanderings" type="Node2D" parent="."]
+
+[node name="KinematicWandering" parent="KinematicWanderings" instance=ExtResource("5_l0mgh")]
+
+[node name="KinematicWandering2" parent="KinematicWanderings" instance=ExtResource("5_l0mgh")]
+
+[node name="KinematicWandering3" parent="KinematicWanderings" instance=ExtResource("5_l0mgh")]
+
+[node name="KinematicWandering4" parent="KinematicWanderings" instance=ExtResource("5_l0mgh")]
+
+[node name="KinematicWandering5" parent="KinematicWanderings" instance=ExtResource("5_l0mgh")]
+
+[node name="VelocityMatchings" type="Node2D" parent="."]
+visible = false
+
+[node name="VelocityMatching" parent="VelocityMatchings" instance=ExtResource("10_qvd21")]
+position = Vector2(173, 222)
+
+[node name="VelocityMatching2" parent="VelocityMatchings" instance=ExtResource("10_qvd21")]
+position = Vector2(395, 102)
+
+[node name="VelocityMatching3" parent="VelocityMatchings" instance=ExtResource("10_qvd21")]
+position = Vector2(745, 222)
+
+[node name="VelocityMatching4" parent="VelocityMatchings" instance=ExtResource("10_qvd21")]
+position = Vector2(657, 106)
+
+[node name="VelocityMatching5" parent="VelocityMatchings" instance=ExtResource("10_qvd21")]
+position = Vector2(384, 453)
+
+[node name="VelocityAlign" type="Node2D" parent="."]
+visible = false
+
+[node name="VelocityMatchingAlign" parent="VelocityAlign" instance=ExtResource("13_27xgv")]
+
+[node name="VelocityMatchingAlign2" parent="VelocityAlign" instance=ExtResource("13_27xgv")]
+position = Vector2(661, 146)
+
+[node name="VelocityMatchingAlign3" parent="VelocityAlign" instance=ExtResource("13_27xgv")]
+position = Vector2(322, 265)
+
+[node name="VelocityMatchingAlign4" parent="VelocityAlign" instance=ExtResource("13_27xgv")]
+position = Vector2(361, 478)
+
+[node name="Faces" type="Node2D" parent="."]
+visible = false
+position = Vector2(345, 438)
+metadata/_edit_group_ = true
+
+[node name="Face" parent="Faces" instance=ExtResource("12_fv61c")]
+metadata/_edit_group_ = true

@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://orfuemkkf6qo"]
 
-[ext_resource type="Texture2D" uid="uid://dqkmlw12mf6oe" path="res://assets/triangle-svgrepo-com_rotated.png" id="1_4ms1r"]
 [ext_resource type="Script" path="res://scripts/face.gd" id="1_43pnp"]
+[ext_resource type="Texture2D" uid="uid://b8p1dacjf0g0x" path="res://assets/triangle-svgrepo-com.svg" id="2_e05l5"]
 
 [node name="Face" type="Node2D"]
 script = ExtResource("1_43pnp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_4ms1r")
+scale = Vector2(0.047, 0.047)
+texture = ExtResource("2_e05l5")

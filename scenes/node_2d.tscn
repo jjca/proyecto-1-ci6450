@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://b8p1dacjf0g0x" path="res://assets/triangle-svgrepo-com.svg" id="2_5ghg0"]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(231, 113)
 script = ExtResource("1_k6ta8")
 metadata/_edit_group_ = true
 
