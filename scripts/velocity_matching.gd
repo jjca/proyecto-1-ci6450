@@ -1,10 +1,9 @@
 extends Node2D
 
-var maxAcceleration : float = 500
+var maxAcceleration : float = 400
 var timeToTarget : float = 0.3
 # Called when the node enters the scene tree for the first time
 var velocity : Vector2 = Vector2.ZERO
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#get_node(".").position = get_parent().get_node("Node2D").position
@@ -12,7 +11,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var target = get_parent().get_node("Node2D")
+	var target = get_parent().get_parent().get_node("Node2D")
 	var character = get_node(".")
 	update(delta,character,target)
 

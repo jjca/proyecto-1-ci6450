@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://che7upbl3ib6b"]
+
+[ext_resource type="Script" path="res://scenes/velocity_align_matching.gd" id="1_w2me0"]
+[ext_resource type="Texture2D" uid="uid://b8p1dacjf0g0x" path="res://assets/triangle-svgrepo-com.svg" id="2_t6oel"]
+
+[node name="VelocityMatchingAlign" type="Node2D"]
+position = Vector2(500, 170)
+scale = Vector2(0.07, 0.07)
+script = ExtResource("1_w2me0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_t6oel")
+metadata/_edit_group_ = true
